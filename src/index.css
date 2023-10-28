@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar {
+    width: 8px;
+    
+}
+
+body{
+    background: #000;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+    background: black;
+}
+  
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #3e3e3e;
+    border-radius: 5px;
+}
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.gradient-custom {
+    /* fallback for old browsers */
+    background: #f6d365;
+  
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right bottom, rgba(246, 211, 101, 1), rgba(253, 160, 133, 1));
+  
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right bottom, rgba(246, 211, 101, 1), rgba(253, 160, 133, 1))
+  }
+
+  html,
+body,
+#root
+{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+}
+
+canvas
+{
+    touch-action:none;
+}
+
+.htmlScreen iframe
+{     
+    position:fixed;
+    width: 1024px;
+    height: 670px;
+    border: none;
+    border-radius: 20px;
+    background: #000000;
+}
+.scene1Container{
+position: relative;
+width: 100%;
+height: 100vh;    
+margin-bottom: 10vh;  
+}
+.scene2Container{
+position: relative;
+width: 100%;
+height: 100vh;       
+}

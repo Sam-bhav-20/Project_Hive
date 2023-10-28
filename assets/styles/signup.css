@@ -1,0 +1,135 @@
+
+.body_signup{
+    background-color: #080710;
+    height: 120vh;
+}
+.h1_signup{
+    font-size: 40px;
+}
+.background_signup{
+    width: 430px;
+    height: 520px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    z-index: 0;
+}
+.background_signup .shape_signup{
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.shape_signup:last-child{
+    background: linear-gradient(
+        to right,
+        #187b15,
+        #014208
+    );
+    right: -120px;
+    bottom: -200px;
+}
+.signup{
+    height: 710px;
+    width: 500px;
+    background-color: rgba(255,255,255,0.13);
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 30px 35px;
+    margin-top: 40px;
+}
+.signup{
+    font-family: 'Poppins',sans-serif;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+}
+.signup h3{
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+}
+
+.label_signup{
+    display: block;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 500;
+    
+}
+.inputs{
+    display: block;
+    height: 52px;
+    width: 100%;
+    background-color: rgba(255,255,255,0.07);
+    border-radius: 3px;
+    padding: 0 14px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+}
+::placeholder{
+    color: #e5e5e5;
+}
+.buttons_signup{
+    width: 100%;
+    background-color: #ffffff;
+    color: #080710;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;   
+    
+}
+.social{
+  margin-top: 30px;
+  display: flex;
+}
+.social div{
+  background: red;
+  width: 150px;
+  border-radius: 3px;
+  padding: 5px 10px 10px 5px;
+  background-color: rgba(255,255,255,0.27);
+  color: #eaf0fb;
+  text-align: center;
+}
+.social div:hover{
+  background-color: rgba(255,255,255,0.47);
+}
+.social .fb{
+  margin-left: 25px;
+}
+.social i{
+  margin-right: 4px;
+}
+
+img{
+    height: 6vw;
+    width: 6vw;
+}
+
+.heading_signup{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 13px;
+    
+}
+.text{
+    margin:17px 0px;
+}
+
+
