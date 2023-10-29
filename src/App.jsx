@@ -17,6 +17,8 @@ import UserProvider from "../context/UserProvider"
 import 'bootstrap/dist/css/bootstrap.css';
 import NewFeed from '../components/NewFeed'
 import Attach from './Attach'
+import Hive from '../pages/Hive.jsx'
+// import { Hive } from '@mui/icons-material'
 
 function App() {
   return (
@@ -35,6 +37,7 @@ function App() {
               {/* <Route path="/" element={<Landing/>}/> */}
               <Route path="/" element={<Homepage/>}/>
               <Route path="/about" element={<About/>}/>
+              <Route path='/home' element={<Hive/>}/>
               <Route path="/attach" element={<Attach/>}/>
               <Route path='/login' element={<Login/>}/>
               <Route path="/signup" element={<Signup/>}/>
@@ -46,6 +49,7 @@ function App() {
                 <Route path='feed' element={<NewFeed/>}/>
                 <Route path="profile-info/:userId" element={<ProfileInfo />} />
                 <Route path="update-blog/:blogId" element={<UpdateBlog />} />
+                
               </Route>
         </Routes>
         

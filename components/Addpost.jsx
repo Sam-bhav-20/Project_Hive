@@ -1,5 +1,7 @@
 import { useState } from "react"
 import { useEffect } from "react"
+import Video from '../assets/contact.mp4'
+import Navbar from "./Landing/Navbar"
 import { Card, CardBody, Form, Input, Label, Button, Container } from "reactstrap"
 import { loadAllCategories } from "../services/category-service"
 import JoditEditor from "jodit-react"
@@ -41,6 +43,16 @@ const AddPost = () => {
         },
         []
     )
+
+    // {
+    //     setUser(getCurrentUserDetail())
+    //     loadAllCategories().then((data) => {
+    //         console.log(data)
+    //         setCategories(data)
+    //     }).catch(error => {
+    //         console.log(error)
+    //     })
+    // }
 
     //field changed function
     const fieldChanged = (event) => {
@@ -111,7 +123,15 @@ const AddPost = () => {
 
     return (
         <div className="wrapper">
-            <Card className="shadow-sm  border-0 mt-2">
+            <video
+                src={Video}
+                loop
+                autoPlay
+                muted
+                className="w-full h-full object-cover -z-50 fixed"
+            />
+            <Navbar/>
+            <Card className="shadow-sm border-0 mt-2">
                 <CardBody>
                     {/* {JSON.stringify(post)} */}
                     <h3>What going in your mind ?</h3>

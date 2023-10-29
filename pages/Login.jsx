@@ -1,11 +1,12 @@
 import React from 'react'
-import Logo from '../assets/logo.png'
+import Logo from '../assets/logo1.jpg'
 import "../assets/styles/login.css"
 import {toast} from 'react-toastify'
 import { loginUser } from '../services/user-service'
 import { doLogin } from '../auth'
 import { useNavigate } from 'react-router-dom'
 import userContext from "../context/userContext"
+import Video from "../assets/contact.mp4"
 import { useContext,useState } from 'react'
 import Navbar from '../components/Landing/Navbar'
 function Login() {
@@ -70,19 +71,26 @@ function Login() {
 
   return (
     <div className='body_login'>
+      <video
+                src={Video}
+                loop
+                autoPlay
+                muted
+                className="w-full h-full object-cover -z-50 fixed"
+            />
       <Navbar/>
       <div className='background_login'>
         <div className='shape'></div>
         <div className='shape'></div>
       </div>
       <div className='cover'>
-        <form onSubmit={handleFormSubmit} className='login_form'>
+        <form onSubmit={handleFormSubmit} className='login_form bg-transparent'>
           <div className='login_heading'>
-            <img src={Logo} className='login_img' alt="logo"/>
+            <img style={{borderRadius:'50%'}} src={Logo} className='login_img' alt="logo"/>
             <h1 className='h1_login'>Project Hive</h1>
           </div>
           <label className='label_login' htmlFor='username'>Username</label>
-          <input className='input_login' type="text" placeholder='Email here' id='email' value={loginDetail.username}
+          <input className='input_login bg-transparent! text-white!' type="text" placeholder='Email here' id='email' value={loginDetail.username}
                       onChange={(e) => handleChange(e, "username")}  name="username"/>
           <label className='label_login' htmlFor='password'>Password</label>
           <input className='input_login' type='password'placeholder='Password here' id='password' value={loginDetail.password}

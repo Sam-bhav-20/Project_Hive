@@ -1,77 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crete+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-::-webkit-scrollbar {
-    width: 8px;
+*::-webkit-scrollbar {
+    
+    display: none;
     
 }
-
-body{
-    background: #000;
-}
-  
-/* Track */
-::-webkit-scrollbar-track {
-    background: black;
-}
-  
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: #3e3e3e;
-    border-radius: 5px;
-}
-  
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: #555;
+.span_textback h4{
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    background: url(../assets/textback.png);
+    -webkit-background-clip: text;
 }
 
-.gradient-custom {
-    /* fallback for old browsers */
-    background: #f6d365;
-  
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: -webkit-linear-gradient(to right bottom, rgba(246, 211, 101, 1), rgba(253, 160, 133, 1));
-  
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background: linear-gradient(to right bottom, rgba(246, 211, 101, 1), rgba(253, 160, 133, 1))
-  }
-
-  html,
-body,
-#root
-{
-    position:absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: black;
-}
-
-canvas
-{
-    touch-action:none;
-}
-
-.htmlScreen iframe
-{     
-    position:fixed;
-    width: 1024px;
-    height: 670px;
-    border: none;
-    border-radius: 20px;
-    background: #000000;
-}
-.scene1Container{
-position: relative;
-width: 100%;
-height: 100vh;    
-margin-bottom: 10vh;  
-}
-.scene2Container{
-position: relative;
-width: 100%;
-height: 100vh;       
-}

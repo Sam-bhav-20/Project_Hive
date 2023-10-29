@@ -1,5 +1,5 @@
 import React,{Fragment, useContext,useEffect,useState} from 'react'
-import MainLogo from '../../assets/logo.png'
+import MainLogo from '../../assets/logo1.jpg'
 import { useNavigate } from 'react-router-dom';
 import {AiOutlineMenu, AiOutlineClose} from 'react-icons/ai';
 import {Link} from 'react-router-dom'
@@ -34,33 +34,43 @@ function Navbar() {
   }
 
   return (
-  <nav className='container border-b border-white-200 backdrop-filter backdrop-blur-sm bg-black text-white bg-opacity-30 w-full h-20 shadow-xl '>
+  <nav className='container border-b border-white-200 backdrop-filter backdrop-blur-sm bg-transparent  text-white bg-opacity-30 w-full h-20 shadow-xl'>
     <div className='flex justify-between items-center h-full w-full px-4 2xl:px-16'>
       <div className='flex justify-between items-center'>
         <Link to='/'>
-          <img src={MainLogo} className='h-14 w-14 cursor-pointer' alt="Logo"/>
+          <img src={MainLogo} className='h-12 w-12 cursor-pointer' style={{borderRadius:'50%'}} alt="Logo"/>
         </Link>
-        <h1 className='px-4 text-2xl'>Project Hive</h1>
+        <h1 className='font-Paci px-4 text-2xl'>Project Hive</h1>
       </div>
       <div className='hidden sm:flex justify-around'>
         <ul className='hidden sm:flex'>
+        {/* <Link to='/attach'>
+            <li className='ml-10 hover:border-b text-xl'>3d-View</li>
+          </Link> */}
+          <Link to='/attach'>
+            <li className='ml-10 hover:border-b text-xl'>3D-View</li>
+          </Link>
           <Link to='/about'>
             <li className='ml-10 hover:border-b text-xl'>About</li>
           </Link>
           <Link to='/contact'>
             <li className='ml-10 hover:border-b text-xl'>Contact</li>
           </Link>
+          <Link to='/home'>
+            <li className='ml-10 hover:border-b text-xl'>Home</li>
+          </Link>
           {login&&(
             <Fragment>
               <Link to={`/user/profile-info/${user.id}`}>
               <li className='ml-10 hover:border-b text-xl'>Profile Info</li>
               </Link>
-              <Link to={"/user/feed"}>
+              {/* <Link to={"/user/feed"}>
                     <li className='ml-10 hover:border-b text-xl'>Feed</li>
-                  </Link>
+                  </Link> */}
               <Link to={"/user/dashboard"}>
               <li className='ml-10 hover:border-b text-xl'>{user.email}</li>
               </Link>
+              
               <button onClick={logout}> 
               <li className='ml-10 hover:border-b text-xl'>Logout</li>
               </button>
@@ -147,7 +157,7 @@ function Navbar() {
         </div>
       </div>
     </div>
-  </nav>    
+  </nav>
   )
 }
 

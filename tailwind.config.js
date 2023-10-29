@@ -7,7 +7,15 @@ export default {
     "./pages/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        Paci: ["Pacifico", "cursive"],
+        Patua: ["Patua One", "serif"],
+        Crete: ["Crete Round", "serif"],
+        Lilita: ["Lilita One", "sans-serif"],
+        Acme: ["Acme", "sans-serif"],
+       },
+    },
   },
   plugins: [],
 }

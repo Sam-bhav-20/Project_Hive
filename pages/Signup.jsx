@@ -1,10 +1,12 @@
 import React, { useEffect } from 'react'
 import { useState } from 'react';
-import Logo from '../assets/logo.png'
+import Logo from '../assets/logo1.jpg'
+import  Video from '../assets/contact.mp4'
 import "../assets/styles/signup.css"
 import { signUp } from '../services/user-service';
 import {toast} from 'react-toastify'
 import { useNavigate } from 'react-router-dom';
+import Navbar from '../components/Landing/Navbar';
 
 function Signup() {
   const navigate = useNavigate()
@@ -87,14 +89,23 @@ function Signup() {
 
   return (
     <div className="body_signup">
+      <video
+                src={Video}
+                loop
+                autoPlay
+                muted
+                className="w-full h-full object-cover -z-50 fixed"
+            />
+            <Navbar/>
     <div className="background_signup">
         <div className="shape_signup"></div>
         <div className="shape_signup"></div>
     </div>
+   
     <div className="cover">
-    <form onSubmit={submitForm} className="signup">
+    <form onSubmit={submitForm} className="signup" style={{marginTop:'8rem'}}>
         <div className="heading_signup">
-        <img src={Logo} alt="logo"/>
+        <img style={{borderRadius:'50%'}} src={Logo} alt="logo"/>
         <h1 className="h1_signup">Project Hive</h1>
         </div>
 
